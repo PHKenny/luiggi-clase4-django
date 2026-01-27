@@ -1,0 +1,20 @@
+[
+  {
+    "model": "categories.Category",
+    "pk": 1,
+    "fields": {
+      "name": "Araxis",
+      "kind": "EGRESS",
+      "description": "La araxis es la skin que Mariano nunca tendrá!"
+    }
+  },
+  {
+    "model": "categories.Category",
+    "pk": 2,
+    "fields": {
+      "name": "Chamba",
+      "kind": "INGRESS",
+      "description": "La chamba"
+    }
+  }
+]

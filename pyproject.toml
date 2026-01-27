@@ -1,0 +1,68 @@
+[project]
+name = "luiggi-clase4-django"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "django>=6.0.1",
+  "django-stubs-ext>=5.2.9",
+  "psycopg[binary]>=3.3.2",
+  "python-dotenv>=1.2.1",
+]
+
+[dependency-groups]
+dev = [
+  "django-types>=0.22.0",
+  "ruff>=0.14.14",
+  "ty>=0.0.13",
+]
+
+
+[tool.ruff]
+indent-width = 2
+line-length = 120
+
+exclude = [
+  "**/migrations/*",
+  "**/templates/*",
+  ".venv",
+  "test*.py",
+]
+
+[tool.ruff.lint]
+ignore = [
+  "F401", # Unused import
+  "E701", # Multiple statements on one line
+  "TD003", # Missing issue link
+  "ANN401",
+  "T201", # print found
+]
+
+select = [
+  "I", # isort
+  "E", "W", # pycodestyle
+  "F", # pyflakes
+  "B", # flakes8-bugbear
+  "TD", # flake8-todo
+  "DJ", # flake8-django
+  "DTZ", # flake8-datetimez
+  "T20", # flake8-print # En un futuro
+  "PYI", # flake8-pyi
+  "ANN", # flake8-annotations
+]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.ty.environment]
+python-version = "3.14"
+
+[tool.ty.src]
+exclude = [
+  ".venv/",
+  ".ruff_cache/",
+  "**/templates/**",
+]
