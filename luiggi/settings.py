@@ -29,6 +29,7 @@ INSTALLED_APPS = [
   'django.contrib.staticfiles',
   'categories',
   'movements',
+  'telemetry',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,7 @@ ASGI_APPLICATION = 'luiggi.asgi.application'
 
 DATABASES = {
   'default': {
-    'ENGINE': 'django.db.backends.postgresql',
+    'ENGINE': 'django.contrib.gis.db.backends.postgis',
     'NAME': os.environ.get('DATABASE_NAME', 'luiggi'),
     'USER': os.environ.get('DATABASE_USERNAME', 'postgres'),
     'PASSWORD': os.environ.get('DATABASE_PASSWORD', 'postgres'),
