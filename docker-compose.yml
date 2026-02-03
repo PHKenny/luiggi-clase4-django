@@ -1,15 +1,16 @@
 services:
   pg:
     container_name: luiggi-pg
-    image: postgres:18.1
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports: ["6432:5432"]
     environment:
       POSTGRES_DB: luiggi
       POSTGRES_USER: luiggi
       POSTGRES_PASSWORD: 123456
-      PGDATA: /mnt/postgresql/data/pgdata
     volumes:
-      - ./docker/pgdata/data:/mnt/postgresql/data
+      - ./docker/pgdata/data:/var/lib/postgresql/18/docker
     restart: always
     networks: ["luiggi-network"]
 

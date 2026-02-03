@@ -27,9 +27,12 @@ INSTALLED_APPS = [
   'django.contrib.contenttypes',
   'django.contrib.messages',
   'django.contrib.staticfiles',
+  'graphene_django',
+  'luiggi',
   'categories',
   'movements',
   'telemetry',
+  'auth',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,7 @@ DATABASES = {
   }
 }
 
+APPEND_SLASH = False
 
 AUTH_PASSWORD_VALIDATORS = []
 
@@ -114,3 +118,7 @@ LOGGING = {
     'django.db': BASE_LOGGING,
   },
 }
+
+PASSWORD_HASHERS = [
+  'django.contrib.auth.hashers.Argon2PasswordHasher',
+]
