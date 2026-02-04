@@ -11,6 +11,7 @@ dependencies = [
   "graphene>=3.4.3",
   "graphene-django>=3.2.3",
   "layrz-forms>=2.1.11",
+  "layrz-sdk>=4.2.5",
   "psycopg[binary]>=3.3.2",
   "python-dotenv>=1.2.1",
   "tzdata>=2025.3",
